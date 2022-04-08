@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://www.gov.uk/browse/education -->
+<html lang="en" class=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Toward Ethical Research in Computational Linguistics</title>
+<script type="text/javascript" async="" src="./test_files/ga.js"></script><script type="text/javascript">
+  (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
+</script><!--[if gt IE 8]><!--><link href="./test_files/application-32698280bd6ca5d99046949db1458750.css" media="screen" rel="stylesheet" type="text/css">
+<!--<![endif]--><!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/static/application-ie6-37c4d65b5fe3d8b6497a669cb7c3b6e3.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/static/application-ie7-781ae9043c1cb57d37fd84c6fa9b56bc.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/static/application-ie8-cd98ff95a99e3361c595fa1e1fa35a9e.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><link href="./test_files/print-7bdad4013aad13ea10c21a3b38b9ddee.css" media="print" rel="stylesheet" type="text/css">
+<!--[if IE 8]>
+<script type="text/javascript">
+  (function(){if(window.opera){return;}
+  setTimeout(function(){var a=document,g,b={families:(g=
+  ["nta"]),urls:["https://assets.digital.cabinet-office.gov.uk/static/fonts-ie8-beb10cbc00c9b7dcdbdee824962bc5f6.css"]},
+  c="https://assets.digital.cabinet-office.gov.uk/static/libs/goog/webfont-debug-96870cf9f159ed811fd43c39bdf4656b.js",d="script",
+  e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+  ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+  .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+  })()
+</script>
+<![endif]--><!--[if gte IE 9]><!--><link href="./test_files/fonts-0fb6b917e34e45c93a44eec72dcc21de.css" media="all" rel="stylesheet" type="text/css">
+<!--<![endif]--><!--[if lt IE 9]>
+      <script src="https://assets.digital.cabinet-office.gov.uk/static/ie-27ccded64045ab36dbfb67c2f47c362b.js" type="text/javascript"></script>
+    <![endif]--><!-- <link rel="shortcut icon" href="https://assets.digital.cabinet-office.gov.uk/static/favicon-447e4ac1ab790342660eacfe3dcce264.ico" type="image/x-icon"> -->
+<link rel="shortcut icon" href="./test_files/rgcl-ico3.ico" type="image/x-icon">
+<!-- For third-generation iPad with high-resolution Retina display: --><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-144x144-4e306e01c31e237722b82b7aa7130082.png">
+<!-- For iPhone with high-resolution Retina display: --><link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-114x114-f1d7ccdc7b86d923386b373a9ba5e3db.png">
+<!-- For first- and second-generation iPad: --><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-72x72-2ddbe540853e3ba0d30fbad2a95eab3c.png">
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --><link rel="apple-touch-icon-precomposed" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-57x57-37527434942ed8407b091aae5feff3f3.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="og:image" content="https://assets.digital.cabinet-office.gov.uk/static/opengraph-image-4e469785ca4cc8f8dd18d0627bc43d19.png">
+<script src="./test_files/jquery-1.7.2-2ce4706f8f7193defaa9e7df2b641e9a.js" type="text/javascript"></script><script defer="" src="./test_files/application-7271b503de9080023c623e7b48a8b031.js" type="text/javascript"></script><script id="ga-params" type="text/javascript">
+  var GOVUK = GOVUK || {};
+  GOVUK.Analytics = GOVUK.Analytics || {};
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26179049-1']);
+  if(document.domain=='www.gov.uk') {
+    _gaq.push(['_setDomainName', '.www.gov.uk']);
+  } else {
+    _gaq.push(['_setDomainName', document.domain]);
+  }
+  _gaq.push(['_setAllowLinker', true]);
+    // track pixel density ratio
+  if (window.devicePixelRatio) {
+    _gaq.push(['_setCustomVar', 11, 'Pixel Ratio', String(window.devicePixelRatio), 2 ]);
+  }
+_gaq.push(["_setCustomVar",2,"Format","browse",3]);
+GOVUK.Analytics.Format = "browse";</script><script type="text/javascript">
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script src="./test_files/frontend-60b89c1cb6260f7f64c5e907df3f1d58.js" type="text/javascript"></script><link title="Search" rel="search" type="application/opensearchdescription+xml" href="https://www.gov.uk/search/opensearch.xml">
+<!--[if gt IE 8]><!--><link href="./test_files/application-89857fbcd499f6fca97601131f31fa53.css" media="screen" rel="stylesheet" type="text/css">
+<!--<![endif]--><link rel="alternate" type="application/json" href="https://www.gov.uk/api/tags.json?type=section&parent_id=education">
+<!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie6-8e949c8765499d60d296f2ff30fb166b.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie7-7f676cf38eab8a9394cf55ab1274a2f4.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie8-e4cbbe2a0e93ca073e64d0ea8f03c8bc.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<style type="text/css">@media print { body:after { content: url(https://ssl.google-analytics.com/__utm.gif?utmwv=5.3.9&utmn=932636080&utmhn=www.gov.uk&utmp=%2Fprint%2Fbrowse%2Feducation&utmac=UA-26179049-1&utmcc=__utma%3D999.999.999.999.999.1%3B); } body { *background: url(https://ssl.google-analytics.com/__utm.gif?utmwv=5.3.9&utmn=932636080&utmhn=www.gov.uk&utmp=%2Fprint%2Fbrowse%2Feducation&utmac=UA-26179049-1&utmcc=__utma%3D999.999.999.999.999.1%3B) no-repeat; }}</style></head>
+<body class="mainstream full-width js-enabled">
+      <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="https://rgcl.wlv.ac.uk" class="visuallyhidden">Skip to main content</a>
+
+    <header role="banner" id="global-header"><div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="http://rgcl.wlv.ac.uk/" title="Go to the computational linguistics homepage" id="logo" class="content">
+              <img src="./test_files/clg-logo3a.png" alt="RGCL.WLV.AC.UK"></a>
+            <a href="https://rgcl.wlv.ac.uk" class="search-toggle js-header-toggle">Search</a>
+          </div>
+<form id="search" class="site-search" method="get" action="http://www.google.co.uk/custom" target="_top" role="search">
+<div class="content">
+<input name="domains" value="rgcl.wlv.ac.uk" type="hidden">
+<label for="sbi" style="display: none">Enter your search terms</label>
+<input class="js-search-focus"  style="font-size: 75%" name="q" size="15" maxlength="255" value="" id="sbi" type="text">
+<input name="sitesearch" value="rgcl.wlv.ac.uk" type="hidden">
+
+<label for="sbb" style="display: none">Submit search form</label>
+<input class="submit" name="sa" value="Search" id="sbb" type="submit">
+<input name="client" value="pub-4357809385579836" type="hidden">
+<input name="forid" value="1" type="hidden">
+<input name="ie" value="ISO-8859-1" type="hidden">
+<input name="oe" value="ISO-8859-1" type="hidden">
+<input name="safe" value="active" type="hidden">
+<input name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:FFFFFF;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:50;LW:47;L:http://rgcl.wlv.ac.uk//styles/imgs/logo-o.jpg;S:http://rgcl.wlv.ac.uk;FORID:1" type="hidden">
+<input name="hl" value="en" type="hidden">
+
+
+</div>
+</form>
+          
+        </div>
+      </div>
+    </header><!--end header-->
+
+<!-- <div id="global-cookie-message">
+      <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/support/cookies">Find out more about cookies</a></p>
+    </div>
+
+    <div id="global-browser-prompt">
+      <p>For a safer, faster, better experience online you should upgrade your browser. <a href="https://www.gov.uk/support/browsers">Find out more about browsers</a> <a href="https://www.gov.uk/browse/education#" class="dismiss" title="Dismiss this message">Close</a></p>
+    </div>
+
+      <section id="user-satisfaction-survey"><div class="wrapper">
+          <h1>Tell us what you think of GOV.UK</h1>
+          <p>This will open a short survey on another website <a href="https://www.gov.uk/browse/education#survey-no-thanks" id="survey-no-thanks">No thanks</a></p>
+          <p class="right"><a href="https://www.surveymonkey.com/s/3WQ2XXR" id="take-survey" class="button" target="_blank">5 min survey</a></p>
+        </div>
+      </section>
+-->
+<div id="global-breadcrumb" class="header-context">
+        <nav role="navigation"><ol class="group">
+<li><a href="./index.htm">Richard Evans</a></li>
+<li><a href="./RichardEvans-ResearchProjects.htm">Research Projects</a></li>
+          </ol></nav>
+</div>
+
+    <div id="wrapper" class="">
+      
+
+<section id="content" role="main" class="group category-page"><header class="page-header group"><hgroup class="full-width"><h1>Toward Ethical Research in Computational Linguistics</h1>
+    </hgroup>
+</header><div class="browse-container full-width group">
+
+
+        <div class="category-description">
+    <h1>Ethics</h1>
+    <p>
+      Research is ethical when it employs universally preferred methods and when it follows best-practice in the discipline.
+    </p>
+   
+    <p>
+      Methods are universally preferred when everyone agrees that no better method could be used. Here, <cite>everyone</cite> includes researchers and stakeholders, including funding organisations, end users, participants in experiments and surveys, national and international governments, the general public, service providers and consumers of such services, and individuals or focus groups representing these aforementioned.
+    </p>
+
+    <p>
+      In computational linguistics, examples of best practice can be found in research papers published in top-tier journals such as MIT Press's <cite>Computational Linguistics</cite> and top-tier conferences such as the annual meetings of the Association for Computational Linguistics.
+    </p>
+
+    <p>
+      When assessing computational linguistics research from the point of view of ethics, it is thus necessary to consider it from a wide range of perspectives.
+    </P>
+	</div>
+
+
+	        <div class="category-description">
+    <h1>Readiness</h1>
+    <p>
+      <cite>Readiness</cite> is another important concept to consider when assessing computational linguistics research from the ethical perspective. Readiness is the extent to which the outputs of a research project are ready to be applied directly in the implementation of services for end users. Here <cite>implementation</cite> relates to the delivery, provision, or deployment of services by a service provider. (It does not refer to <cite>coding</cite>). Readiness can indicate the probability that the research outputs will achieve impact (both benefits and harms). It can also indicate the time within which such impacts are likely to be achieved. The greater the level of readiness:
+      
+      <ol>
+	<li>the more rapid the achievement of impact.</li>
+
+	
+	<li>the greater the need to demonstrate that the provided services
+
+	  <ol>
+	    <li>are <cite>accountable</cite>.</li>
+	    <li>are <cite>justifiable</cite>.</li>
+	    <li>are <cite>transparent</cite>.</li>
+	    <li>are not <cite>biased</cite>.</li>
+	    <li>do not <cite>discriminate</cite>.</li>
+	  </ol>
+	  
+      </ol>
+
+      When assessing your project, provide specific examples to demonstrate readiness. Consider the situation before the project begins and how things may have changed by the time it concludes.
+    </p>
+
+    <p>
+      In artificial intelligence (AI) and computational linguistics, various indicators of five main aspects of readiness should be considered:
+    </p>
+
+    <h2>Data Readiness</h2>
+
+    <ol>
+      <li>Existence
+	<ol>
+	  <li>No suitable data exists and we are unsure where it could be collected from.</li>
+	  <li>We have an idea of how suitable data could be developed or collected.</li>
+	  <li>We have an annotation scheme or archive structure which we can use to develop or collect suitable data.</li>
+	  <li>We have prototype annotation tools or web crawlers that could be used to develop or collect suitable data.</li>
+	  <li>We have tested the prototype annotation tool or web crawler to annotate or collect suitable data.</li>
+	  <li>We have used the annotation tool or web crawler to annotate or collect some of the specific data that we need for our project.</li>
+	  <li>We have access to all the data that we need.</li>
+	</ol>
+      </li>
+
+      
+      <li>Format and Quality
+	<ol>
+	  <li>For the project, we will collect and/or process structured data (e.g. annotated corpora, databased, electronic dictionaries, ontologies)</li>
+	  <li>For the project, we will collect and/or process unstructured data (e.g. plain text corpora)</li>
+	  <li>We are aware of the quality level of the data we wish to use.</li>
+	  <li>The data we wish to use contains errors or irregularities which may affect our project (e.g. structural errors, encoding errors, or a mix).</li>
+	  <li>The data we wish to use is biased/unbalanced and is not fully representative of the population or phenomenon we are studying.</li>
+	  <li>We have methods available to to measure the quality (and bias) of our data.</li>
+	  <li>The data we have available is fit for the tasks in our project.</li>
+	</ol>
+	    </li>
+
+
+
+
+    
+    <h2>AI Readiness</h2>
+
+    <ol>
+      <li>Specification Readiness
+
+	<ol>
+	  <li>We have {no|some|moderate|extensive} knowledge of how end users might apply this tool to implement specific services.</li>
+	  <li>We have user-informed success criteria for this tool.</li>
+	  <li>We have a complete specification of the use case for this tool.</li>
+	</ol>
+    </ol>
+
+
+        <ol>
+      <li>Algorithmic Readiness
+
+	<ol>
+	  <li>Algorithmic approach is unknown.</li>
+	  <li>Family of algorithms (e.g. classification, regression, clustering, time-series analysis, structural equation models, fuzzy logic applications, symbolic knowledge reasoning) has been defined.</li>
+	  <li>Suitable evaluation methods and measures for the algorithms are known.</li>
+	  <li>Algorithm has been evaluated against real-world data.</li>
+	  <li>Hyperparameters of the algorithm have been tuned using real-world data.</li>
+	  <li>In previous research, existing algorithms have already been used to solve this specific problem.</li>
+	</ol>
+      </li>
+	</ol>
+
+	<ol>
+	  <li>Expert Knowledge Readiness
+	    <ol>
+	      <li>We develop a system which uses handcrafted rules to achieve its objective ("symbolic AI").</li>
+	      <li>The knowledge domain is unknown.</li>
+	      <li>We have identified experts who can provide the domain knowledge to be encoded in the system.</li>
+	      <li>Some partial domain knowledge exists for our use case.</li>
+	      <li>We have initiated collaboration with domain experts (e.g. through contracts).</li>
+	      <li>Expert domain knowledge already exists in a machine-readable format.</li>
+	      </ol>
+	    </li>
+	  </ol>
+
+	<ol>
+	  <li>Intellectual Property Readiness
+
+	    <ol>
+	      <li>We hypothesise possible intellectual property (patentable inventions) from this project.</li>
+	      <li>We have identified specific patentable inventions or other intellectual property from this project.</li>
+	      <li>We have a detailed description of possible patentable inventions. We have conducted an initial search of the technical field and prior art (patents).</li>
+	      <li>We have confirmed the novelty and patentability of our invention (or decided on alternative IP protection if not patenting).</li>
+	      <li>We have filed our first complete patent application/draft of first IPR strategy.</li>
+	      <li>We have received a positive response to our patent application. We have made an initial assessment of our freedom to operate and of the patent strategy supporting business.</li>
+	      <li>Our patent has entered into the national phase. We have registered any other formal IPR.</li>
+	      <li>We have had our first patent granted or IPR strategy fully implemented. We have a more complete assessment of freedom to operate.</li>
+	      <li>Our patent has been granted in relevant countries. We have strong IPR support for business.</li>
+	    </ol>
+	  </li>
+	</ol>
+
+
+</p>
+
+
+
+      
+
+</div>
+
+
+		        <div class="category-description">
+			  <h1>Human Participants</h1>
+
+			  The recruitment of human participants in experiments is ethical when the underlying research is sound and follows practice established in the discipline. You should make sure that your research is scientifcally sound before recruiting participants.
+
+			  <h2>Informed Consent</h2>
+
+			  Default consent (e.g. pre-ticked boxes) should never be used. Consent should always be informed and active. Individuals must be able to refuse consent without deriment. Consent should also be monitored to check that it has not been withdrawn at any time.
+
+    <h2>Statistical Power</h2>
+
+    If too few subjects participate, it may be impossible to draw any meaningful conclusion from your experiment and it becomes unsound. Tests of statistical power help you to determine whether or not a large enough number of participants is involved.
+    
+    <h2>Recruitment</h2>
+    
+    <h3>Coercion</h3>
+
+    <h3>Bribery</h3>
+
+    <h2>Anonymity</h2>
+
+    <p>Include a note on the difficulty of successful anonymisation and methods that can be used to defeat it (Rocher et al., 2019).</p>
+    
+    </div>
+
+
+			<div class="category-description">
+			  <h1>Data</h1>
+			  
+			  <p>
+			    
+			  </p>
+
+			  <h2>The General Data Protection Regulation (GDPR)</h2>>
+
+			  <p>
+			    The GDPR applies to controllers and processors.</p>
+
+			    <p>It also applies to <cite>personal data</cite> realting to an identifiable person who can be directly or indirectly identified by reference to an identifier. Personal data that has been pseudonymised or partially anonymised can still fall within the scope fo the GDPR depending on whether the data subjects can still be identified.
+			    </p>
+
+			  <p>
+			    The GDPR specifies that personal data shall only be processed for the originally specified purpose though it may be further processed for scientific or historical research purposes. 
+			  </p>
+			  			  <p>
+			    Personal data shall also only be collected to the minimum extent adequate, relevant, and required for what is needed is relation to the specified purpose. 
+						  </p>
+
+			  <p>
+			    Personal data shall be retained only for as long as is necessary to achieve the original specified purpose. It may be stored for longer periods for scientific or historical research purposes but only with implementation of technical and organisational measures to safeguard the rights and freedoms of the data subjects and to preserve their privacy (secure storage).
+			  </p>
+
+			  <p>
+			    Personal data will be processed in a secure manner, with protections against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures.
+			  </p>
+
+			  <p>
+			    It&apos;s necessary to have a lawful basis for processing the data. Usually, necessity is the selected basis. i.e. The specified objective could not be achieved without processing the personal data. Additional legal bases for processing personal data are:
+
+			    <ol>
+			      <li>Data subjects have given their consent. Consent must always be <cite>specific</cite> and <cite>informed</cite>.</li>
+			      <li>The processing is necessary in order to fulfil a contract made with data subjects.</li>
+			      <li>The processing is necessary in order for you to comply with the law.</li>
+			      <li>The processing is necessary in order to protect someone&apos;s life (vital interests).</li>
+			      <li>The processing is necessary for you to perform a task that is in the public interest or for your official functions, and the task or function has a clear basis in law.</li>
+			      <li>The processing is necessary for your legitimate interests or the legitimate interests of a third party unless there is a good reason to protect the data subject&apos;s personal data which overrides those interests. Legitimate interests are hard to define. See p.44-45 of the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/711097/guide-to-the-general-data-protection-regulation-gdpr-1-0.pdf" target="_blank">Guide to the General Data Protection Regulation</a> for a set of criteria to consider when deciding whether interests are legitimate interests and the proposed data processing is allowed under the GDPR.</li>
+			    </ol>
+
+			    The GDPR says that scientific research is considered a compatible lawful processing operation, allowing personal data to be processed in slightly different ways from those in the original specified purpose.
+			  </p>
+
+			  <p>Records must be kept of the legal bases for processing personal data. 
+			  </p>
+
+			  <p>
+			    Informed consent (discussed earlier) should be acquired from individuals. 
+			  </p>
+
+			  <p>
+			    The GDPR provides rights for individuals (including data subjects):
+
+			    <ol>
+			      <li><cite>The right to be informed</cite> about the collection and use of personal data. This includes &apos;privacy information&apos; and information about the purpose and use of the collection. This should be provided at the time of data collection. The information must be accessible and comprehensible.</li>
+			      <li><cite>The right of access</cite> to their personal data together with documentation explaining why it was gathered and the right to information about automated decision-making or profiling.</li>
+			      <li><cite>The right to rectification</cite>, which includes the right to have inaccurate personal data corrected or completed, if it is incomplete.</li>
+			      <li><cite>The right to erasure</cite> (aka the right to be forgotten), which is the right to have personal data erased. This right can be exercised if the personal data is no longer required for the originally specified purpose.</li>
+			      <li><cite>The right to restrict processing</cite>, which is the right to restrict access to the personal data or suppress such data. It provides a way for data subjects to restrict the processing of their personal data.</li>
+			      <li><cite>The right to data portability</cite>, which allows data subjects to obtain and reuse their personal data for their own purposes across different services and systems.</li>
+			      <li><cite>The right to object</cite>, which gives individuals the right to object to, and stop, the processing of their personal data in certain circumstances. This right may be disregarded if there are compelling reasons to continue the processing.
+
+				(p. 100)
+
+			      </li>
+			      <li><cite>Rights in relation to automated decision making and profiling</cite></li>
+			    </ol>
+
+			    These rights are extensively detailed in the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/711097/guide-to-the-general-data-protection-regulation-gdpr-1-0.pdf" target="_blank">Guide to the General Data Protection Regulation</a>. 
+			    </p>
+			  
+			</div>
+
+
+
+      <h1>Legality</h1>
+      
+
+	<ol>
+	  <li>The legality of the particular types of data processing involved in our project is unclear.</li>
+	  <li>The project will use data of illicit origin (data obtained without the consent of the data owners or the data subjects. This may include leaked data, data obtained by hacking, and data obtained against the terms of use of the data provider. We describe data protection methods such as anonymisation, encryption, secure storage, etc.)</li>
+	  <li>The project will be using data from the public sector. We present our approach to transparency and accountability (including public oversight, monitoring, and control of decisions made in the project).</li>
+	  <li>The project uses the data to inform a decision-making process and the data subjects are natural persons. We present our approach to making the decision-making process explainable.</li>
+	  <li>We have checked to make sure that the tool we develop does not infringe on any existing patents.</li>
+	  <li>We will store the data securely.</li>
+	  <li>There is a law explicitly allowing our processing of this type of data (see <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/711097/guide-to-the-general-data-protection-regulation-gdpr-1-0.pdf" target="_blank">the GDPR</a> and the UK Government's <a href="https://www.gov.uk/government/publications/data-ethics-framework" target="_blank">Data Ethics Framework</a>).</li>
+	  <li>
+	</ol>
+	
+
+			
+
+				        <div class="category-description">
+    <h1>Discrimination and Bias</h1>
+</div>
+
+
+        <div class="category-description">
+    <h1>Justifiable Outcomes</h1>
+</div>
+
+
+	        <div class="category-description">
+    <h1>Accountability</h1>
+
+    <p>The public sector is the part of the economy which includes public services and public enterprises. Typically, public services are those which benefit all of society, including services provided by the government. This includes public education, health care, emergency services, and the work of government departments such as the Department of Work and Pensions, the Department for Education, or HM Revenue \&amp; Customs. All services provided by the public sector must be accountable.</p>
+
+    <p>To be accountable, a person or organisation must be able to justify its actions or decisions. They must be capable of clearly explaining the services that they provide or the decisions that they make. NLP tools used in the provision of services should be similarly capable of being explained and and understood.</p>
+    <p>Service delivery can be made more accountable in several ways:
+
+      <ol>      
+	<li>Involving humans in decisions affecting service users</li>
+
+	<li>Interacting with stakeholders to:
+
+	  <ol>
+	    <li>list and explain the significance of the instrumental factors which justify particular actions/decisions.</li>
+	    <li>
+	      periodically review these factors
+	      </li>
+	    </ol>
+
+	</li>
+	
+	<li>Detailed record-keeping relating to decisions made and service outcomes</li>
+	<li>Human monitoring of service delivery</li>
+	<li>Periodic reporting</li>
+	</ol>
+    </p>
+
+    Service providers
+    </div>
+
+        <div class="category-description">
+    <h1>Application Forms</h1>
+
+    <p>
+      For:
+      
+    <ol>
+      <li><a href="./ethics/20210506_RIILP-Ethics-Application-Taught-Masters.docx" target="_blank">Taught master&apos;s (PGT) students</a></li>
+      <li><a href="./ethics/20210811_RIILP-Ethics-Application-PGR-Students-and-Staff.docx" target="_blank">PhD students and research staff</a></li>
+    </ol>
+    </p>
+
+    <p>
+    If:
+    
+    <ol>
+      <li>Your participants are under the age of 18 or are otherwise unable to give legal consent, <br/>please have them and their carers complete a <a href="./ethics/20210525_RIILP_Participant-Assent_Form.docx" target="_blank">Participant Assent Form</a>.</li>
+
+      <li>You plan to use an entire organisation as a source of data, <br/>please complete an <a href="./ethics/20210525_RIILP-Organisational-Consent_Form.docx" target="_blank">Organisational Consent Form</a>.</li>
+    </ol>
+      </p>
+</div>
+
+        <div class="category-description">
+    <h1>Useful Links</h1>
+
+    <p>Please do not consider this list to be exhaustive. <span style="background-color:#FFFFD0">Highlighted</span> items are hubs providing links to additional relevant resources.
+    
+    <ol>
+      <li><span style="background-color:#FFFFD0">The Association for Computational Linguistics&apos;s:</span>
+
+	  <ol>
+	    <li><a href="https://aclweb.org/aclwiki/Ethics_in_NLP" target="_blank">Ethics in NLP</a> (Resources)
+	      <li>Responsible NLP Research Checklist (<a href="https://aclrollingreview.org/Responsible_NLP_Research_Checklist___Fillable_form.pdf" target="_blank">Application form</a>, <a href="https://aclrollingreview.org/responsibleNLPresearch/" target="_blank">Guidance</a>)</li>
+	</ol>
+      </li>
+
+      <li><span style="background-color:#FFFFD0">The Association for Computing Machinery (ACM)&apos;s <a href="https://www.acm.org/code-of-ethics" target="_blank">Code of Ethics and Professional Conduct</a></span></li>
+
+    <li>
+      Brysbaert, M. (2019) <a href="https://www.journalofcognition.org/articles/10.5334/joc.72/" target="_blank">How many participants do we have to include in properly powered experiments? A tutorial of power analysis with reference tables</a>. <cite>Journal of Cognition</cite>, 2 (1), 16. 
+    </li>
+
+    <li>GOV.UK&apos;s <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/711097/guide-to-the-general-data-protection-regulation-gdpr-1-0.pdf" target="_blank">Guide to the General Data Protection Regulation</a> (GDPR)</li>
+
+    <li>Grady, C. (2005) Ethical and practical considerations of paying research participants (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1159153/" target="_blank">Paper</a>; <a href="https://www.niehs.nih.gov/research/resources/assets/docs/ethical_and_practical_considerations_of_paying_research_participants_508.pdf" target="_blank">Presentation</a>). Department of Clinical Bioethics, Clinical Center/NIH.
+      </li>
+    
+<li>Jurafsky, D. (2020) <a href="https://web.stanford.edu/class/cs384/" target="_blank">Ethical and Social Issues in NLP</a>. Introduction and Course Overview. Stanford NLP Group, Stanford University.</li>
+    
+    <li>Leslie, D. (2019) <a href="https://www.turing.ac.uk/sites/default/files/2019-06/understanding_artificial_intelligence_ethics_and_safety.pdf" target="_blank">Understanding artificial intelligence ethics and safety: A guide for the responsible design and implementation of AI systems in the public sector</a>. Alan  Turing Institute.</li>
+
+    <li>Rocher, L., Hendrickx, J. M., and de Montjoye, Y.-A. (2019) <a href="https://www.nature.com/articles/s41467-019-10933-3.pdf" target="_blank">Estimating the success of re-identifications in incomplete datasets using generative models</a>. In Nature Communications, 10 (3069).</li>
+
+      <li>CEBM (University of Oxford)'s <a href="https://catalogofbias.org/" target="_blank">Catalogue of Bias</a>.</li>
+    
+    <li>Sabin, C. A. (2010)
+<a href="https://www.ukcab.net/wp-content/uploads/2010/06/csabin-bias.pdf" target="_blank">What is bias and how can it affect the outcomes from research?</a>. Dept. Infection and Population Health, UCL.
+    
+    <li>Thomas, D. R., Pastrana, S., Hutchings, A., Beresford, A. R. (2917) <a href="https://www.cl.cam.ac.uk/~drt24/papers/2017-ethical-issues.pdf" target="_blank">Ethical issues in research using datasets of illicit origin</a>. In Proceedings of the 2017 Internet Measurement Conference, p. 445-462, November 2017.</li>
+    
+    <li><span style="background-color:#FFFFD0">University of Wolverhampton&apos;s <a href="https://www.wlv.ac.uk/research/research-policies-procedures--guidelines/ethics-guidance/" target="_blank">Ethics Guidance</a></span></li>
+
+    <li>Xie, N., Ras, G., van Gerven, M., Doran, D. (2021) <a href="https://arxiv.org/abs/2004.14545" target="_blank">Explainable Deep Learning: A Field Guide for the Uninitiated</a>. arXiv:2004.14545v1 [cs.LG] 20 Apr 2020.
+      </li>
+    </ol>
+    </p>
+    </div>
+
+
+
+
+    <ul class="sub-categories group">
+
+      <li>
+        <h2><a href="./index.htm">Front page</a></h2>
+        <p>General information about me.</p>
+      </li>
+      <li>
+        <h2><a href="./RichardEvans-Publications.htm">Publications</a></h2>
+        <p>Bibliographic information and electronic versions of my research papers and technical reports.</p>
+      </li>
+      <li>
+        <h2><a href="./RichardEvans-Resources.htm">Resources</a></h2>
+        <p>Information about language technologies and resources that I have helped to develop.</p>
+      </li>
+      <li>
+<!--        <h2><a href="https://www.gov.uk/browse/education/student-finance">Background</a></h2>
+        <p>Third party resources facilitating dissemination and development of research in computational linguistics.</p> -->
+      </li>
+    </ul>
+</div>
+</section>
+</div>
+
+    <footer class="group js-footer" id="footer" role="contentinfo"><div class="footer-wrapper">
+        <nav class="footer-categories"><div class="footer-explore">
+<!--            <h2>My computational linguistics research infrastructure</h2> -->
+            <h2>Research facilities</h2>
+
+            <ul>
+	      <li><a href="http://aclanthology.info" target="_blank">Anthology of the Association of Computational Linguistics</a></li>	      
+              <li><a href="http://arstechnica.com/" target="_blank">Ars Technica</a></li>
+	      <li><a href="http://aclweb.org" target="_blank">Association of Computational Linguistics</a></li>
+	      <li><a href="http://www.journals.elsevier.com/brain-and-language/" target="_blank" target="_blank">Brain and Language</a></li>
+	      <li><a href="http://www.hit.uib.no/corpora/" target="_blank">Corpora List</a></li>
+              <li><a href="http://languagelog.ldc.upenn.edu/nll/" target="_blank">Language Log</a></li>
+              <li><a href="http://linguistlist.org/issues/index.cfm" target="_blank">Linguist List</a></li>
+	      <li><a href="http://riotscience.co.uk" target="_blank">RIOT Science Club</a></li>
+	      <li><a href="http://www.sigaccess.org/welcome-to-sigaccess/resources/accessible-pdf-author-guide/" target="_blank">SIG ACCESS guide to creating accessible PDF documents</a>.</li>
+	      <li><a href="http://www.sigaccess.org/welcome-to-sigaccess/resources/accessible-writing-guide/" target="_blank">SIG ACCESS guide to writing in the academic accessibility community</a>.</li>
+              <li><a href="http://www.sigaccess.org/" target="_blank">Special Interest Group in Accessible Computing</a></li>
+	      <li><a href="https://www.w3.org/TR/2019/WD-coga-usable-20190716/" target="_blank">Making Content Usable for People with Cognitive and Learning Disabilities</a> (W3C Working Draft)</li>
+	      <li><a href="http://www.aclweb.org/portal/sigs" target="_blank">Special Interest Groups</a></li>
+              <li><a href="http://stackoverflow.com" target="_blank">Stack Overflow</a></li>
+              <li><a href="http://www.ted.com/" target="_blank">TED</a></li>
+            </ul>
+</div>
+
+
+
+          <div class="footer-inside-government">
+            <h2><a href="https://www.wlv.ac.uk" target="_blank">University of Wolverhampton</a></h2>
+
+            <ul>
+	      <li><a href="http://rgcl.wlv.ac.uk" target="_blank">Research Group in Computational Linguistics</a> (<a href="https://twitter.com/RGCL_WLV" target="_blank">@RGCL_WLV</a>)</li>
+	      <li><a href="https://www.wlv.ac.uk/research/institutes-and-centres/" target="_blank">Research Institutes</a></li>
+              <li><a href="http://www.wlv.ac.uk/default.aspx?page=14112" target="_blank">For students</a></li>
+              <li><a href="http://www.wlv.ac.uk/lib/" target="_blank">Learning and Information Services</a></li>
+              <li><a href="http://www.wlv.ac.uk/Default.aspx?page=6869" target="_blank">Press Releases</a></li>
+	      <li>&nbsp;</li>
+	      <li>&nbsp;</li>
+            </ul>
+	  </div>
+
+          <div class="footer-inside-government">
+            <h2>Contact me</h2>
+	    <ul><li>
+		Richard Evans,<br/>
+		MC 134,<br/>
+		University of Wolverhampton,<br/>
+		Wulfruna Street,<br/>
+		Wolverhampton,<br/>
+		West Midlands,<br/>
+		WV1 1LY,<br/>
+		United Kingdom.<br/><br/>
+		Email: &#082;&#046;&#074;&#046;&#069;&#118;&#097;&#110;&#115;&#064;&#119;&#108;&#118;&#046;&#097;&#099;&#046;&#117;&#107;<br/>
+		Twitter: @R_3vans<br/>
+		Google Scholar: <a href="https://scholar.google.co.uk/citations?user=dvGT4DoAAAAJ&hl=en" style="text-decoration:none"><font color="black">&#9733;</font></a><br/>
+		ORCID ID: <a href="https://orcid.org/0000-0002-1220-8605"><font color="black">0000-0002-1220-8605</font></a><br/>
+		<a href="https://www.researchgate.net/profile/Richard_Evans3">Richard Evans on ResearchGate</a><br/>
+	      </li>
+	    </ul>
+	  </div>
+
+          <div class="footer-inside-government">
+            <h2>Improving text accessibility</h2>
+	    <ul><li><a href="http://homepages.inf.ed.ac.uk/kwoodsen/demos/simplify.html" target="_blank">Automatic sentence simplification using Wikipedia<a>
+	      </li>
+	      <li><a href="http://openbooktool.net" target="_blank">OpenBook<a>
+	      </li>
+	      <li><a href="https://rewordify.com" target="_blank">Rewordify</a>
+	      </li>
+	    </ul>
+	  </div>
+
+          <div class="footer-inside-government">
+<H2>Web page</H2>
+	    <ul><li>
+		Design of this page was inspired by and adapted from that developed for <a href="http://gov.uk" target="_blank">GOV.UK</a> by the <a href="http://digital.cabinetoffice.gov.uk/" target="_blank">Government Digital Service</a>.
+	      </li>
+	      <li>
+		In accordance with <a href=" http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-visual-presentation" target="_blank">WCAG 2.0. Success Criterion 1.4.8 (Visual Presentation)</a>, the text on this page is not justified. 
+	      </li>
+	      <li>
+		More information on WCAG 2.0 principles, guidelines, and success criteria can be found <a href="http://www.w3.org/TR/WCAG20/" target="_blank">here</a>.
+	      </li>
+	    </ul>
+	  </div>
+
+        </nav>
+<!--
+<div class="footer-meta">
+  <nav><ul>
+<li><a href="https://www.gov.uk/support">Support</a></li>
+      <li><a href="https://www.gov.uk/support/cookies">Cookies</a></li>
+      <li><a href="https://www.gov.uk/feedback">Feedback</a></li>
+      <li><a href="https://www.gov.uk/cymraeg">Cymraeg</a></li>
+      <li>Built by the <a href="http://digital.cabinetoffice.gov.uk/">Government Digital Service</a>
+</li>
+    </ul>
+<p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/">Open Government Licence</a>, except where otherwise stated</p>
+  </nav><div class="copyright">
+    <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">© Crown Copyright</a>
+  </div>
+ -->
+</div>
+
+      </div>
+    </footer><!--end footer--><div id="global-app-error" class="app-error hidden"></div>
+
+  
+
+</body></html>
